@@ -189,6 +189,27 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'STSj3pyGPtJd0UmD0H41NzTT-gzGzoHsz',
+        app_key: '5ExdwmDjiM10G8YUUTcB0WtY',
+        placeholder: 'ヾﾉ≧∀≦)o 和我说说话啵！'
+    });
+</script>
+
+    </div>
+</div>
+
 </div>
                 
 
@@ -588,7 +609,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2018 琪音&nbsp;
+                &copy; 2019 琪音&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>
@@ -716,7 +737,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
             <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+          <!--  <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>-->
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
             <div class="ins-section-container"></div>
@@ -741,6 +762,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="/js/insight.js" defer></script>
 <link rel="stylesheet" href="/css/search.css">
 <link rel="stylesheet" href="/css/insight.css">
+
     
 </body>
 </html>
