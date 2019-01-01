@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>test.md - 琪音的博客</title>
+<title>琪音的博客</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -49,9 +49,16 @@
 
     
     
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131269046-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    
-    
+    gtag('config', 'UA-131269046-1');
+</script>
+
+
     
     
 
@@ -75,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/网站logo.svg" alt="test.md" height="28">
+                <img src="/images/网站logo.svg" alt="" height="28">
             
             </a>
         </div>
@@ -105,6 +112,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -130,7 +141,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 20 个字)
+                    5 分钟 读完 (大约 784 个字)
                 </span>
                 
             </div>
@@ -138,11 +149,65 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                test.md
+                
             
         </h1>
         <div class="content">
-            <p>建了个博客，来记录学习内容，还在摸索中。</p>
+            <h2 id="建立个人博客-Mac-OS"><a href="#建立个人博客-Mac-OS" class="headerlink" title="建立个人博客 (Mac OS)"></a>建立个人博客 (Mac OS)</h2><p>作为一个记性不好，自学programming的菜鸟，学习过程中经常会查询一些操作，如果不及时记录和理解，下次遇到问题还要花时间搜索。虽然现在有很多平台可以作为自己的学习笔记输出地，比如豆瓣、简书、微信订阅号等等，但是鉴于想满足自己即希望被看到又不想被看到的矛盾心理，决定学习搭建一个自己的窝。</p>
+<p>网上可以搜索到很多Wordpress的教程，不过我只是想搭建一个静态博客网站，一开始选择了Hugo，在修改配置文件后一直会有问题，耗了很长时间没有解决。所以换了hexo，静态页面搭建流程都是差不多的，hexo有<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">中文文档和视频</a>，也遇到了一些bug，所以记录一下！</p>
+<h3 id="安装环境配置"><a href="#安装环境配置" class="headerlink" title="安装环境配置"></a>安装环境配置</h3><ul>
+<li>安装 Node.js <a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a></li>
+<li>安装Homebrew <a href="https://brew.sh/" target="_blank" rel="noopener">官网</a><br>终端输入 <code>brew install git</code>安装Git</li>
+</ul>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><ul>
+<li>终端执行以下命令<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd 你的hexo存储路径</span><br><span class="line">sudo npm install -g hexo</span><br><span class="line"># 初始化</span><br><span class="line">hexo init</span><br><span class="line"># 生成一个站点</span><br><span class="line">hexo g</span><br><span class="line"># 本地查看</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此时打开 <code>http://localhost:4000/</code>会看到一个初始博客</p>
+<h3 id="github部署"><a href="#github部署" class="headerlink" title="github部署"></a>github部署</h3><ul>
+<li><p>注册Github账号<a href="https://github.com/" target="_blank" rel="noopener">官网</a></p>
+</li>
+<li><p>配置Github<br>打开终端</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 一行一行的输入</span><br><span class="line">$ git config --global user.name &quot;用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;邮箱&quot;</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;注册邮箱&quot;</span><br><span class="line"># 输入完以后你会看到key地址 vim打开</span><br><span class="line">cd &quot;key地址&quot;</span><br><span class="line">vim id_rsa.pub</span><br><span class="line"># 复制里面的内容</span><br></pre></td></tr></table></figure>
+<p>进入github主页，右上角头像，点击<code>setting</code>，进入<code>SSH and GPG keys</code>，右上角<code>new SSH key</code>粘贴刚才的内容进去保存</p>
+</li>
+<li><p>验证</p>
+<p>终端输入</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果操作正确，会看到以下提示，就可以啦！</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi  你的用户名， You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建博客需要的仓库</p>
+<p>进入主页，点击<code>New repository</code><br>输入<code>username.github.io</code>这里的一定要是你的username，创建即可。</p>
+</li>
+</ul>
+<h3 id="hexo初步配置"><a href="#hexo初步配置" class="headerlink" title="hexo初步配置"></a>hexo初步配置</h3><h4 id="主题下载"><a href="#主题下载" class="headerlink" title="主题下载"></a>主题下载</h4><ul>
+<li><p>进入博客所在目录，下载主题，我选择的主题为icarus</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将全局配置文件的theme属性改为: <code>theme: icarus</code></p>
+</li>
+<li>修改局部配置文件<a href="https://blog.peiyingchi.com/2017/03/10/hexo-icarus-settings/" target="_blank" rel="noopener">参考中文文档</a></li>
+</ul>
+<h4 id="github部署-1"><a href="#github部署-1" class="headerlink" title="github部署"></a>github部署</h4><ul>
+<li><p>安装Git部署器</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm  install hexo-deployer-git -save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置文件<br>打开 <code>_config.yml</code> 文件，在末尾添加以下命令：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="hljs-built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署<br>利用hexo指令 <code>hexo d</code> 发布到github，在github仓库中的setting下点击网站就可以看到部署的静态web网站了。</p>
+</li>
+</ul>
+<h4 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h4><ul>
+<li><p>新建文章</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;test&quot;</span><br><span class="line">#在目录下可以看到一个test.md的文档</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布文章</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>暂时先这样，慢慢完善！</p>
 
         </div>
         
@@ -150,7 +215,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/code/">code</a>
+                    <a class="has-link-grey -link" href="/tags/hexo/">hexo</a>
                 </div>
             </div>
         </div>
@@ -277,8 +342,8 @@
             </div>
         </nav>
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="http://github.com/qiyin0721">
-                关注我</a>
+            <a class="level-item button is-link is-rounded" href="/mail to &#39;632701585xy@gmail.com&#39;">
+                联系我</a>
         </div>
         
         
@@ -308,18 +373,55 @@
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
         </div>
         
     </div>
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#建立个人博客-Mac-OS">
+        <span class="has-mr-6">1</span>
+        <span>建立个人博客 (Mac OS)</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#安装环境配置">
+        <span class="has-mr-6">1.1</span>
+        <span>安装环境配置</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装hexo">
+        <span class="has-mr-6">1.2</span>
+        <span>安装hexo</span>
+        </a></li><li>
+        <a class="is-flex" href="#github部署">
+        <span class="has-mr-6">1.3</span>
+        <span>github部署</span>
+        </a></li><li>
+        <a class="is-flex" href="#hexo初步配置">
+        <span class="has-mr-6">1.4</span>
+        <span>hexo初步配置</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#主题下载">
+        <span class="has-mr-6">1.4.1</span>
+        <span>主题下载</span>
+        </a></li><li>
+        <a class="is-flex" href="#github部署-1">
+        <span class="has-mr-6">1.4.2</span>
+        <span>github部署</span>
+        </a></li><li>
+        <a class="is-flex" href="#第一篇文章">
+        <span class="has-mr-6">1.4.3</span>
+        <span>第一篇文章</span>
+        </a></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -332,20 +434,9 @@
         <ul class="menu-list">
         
             <li>
-                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                <a class="level is-mobile" href="https://github.com/yanglbme" target="_blank">
                     <span class="level-left">
-                        <span class="level-item">Hexo</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">hexo.io</span>
-                    </span>
-                </a>
-            </li>
-        
-            <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
-                    <span class="level-left">
-                        <span class="level-item">PPOffice</span>
+                        <span class="level-item">yanglbme</span>
                     </span>
                     <span class="level-right">
                         <span class="level-item tag">github.com</span>
@@ -380,7 +471,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/code/" style="font-size: 10px;">code</a>
+        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
 </div>
 
@@ -399,14 +490,14 @@
             
             <a href="/2018/12/31/test/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="test.md">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-31T15:48:22.000Z">2018-12-31</time></div>
-                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6">test.md</a>
+                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6"></a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -470,9 +561,9 @@
             <ul class="menu-list">
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/code/">
+                    <a class="level is-marginless" href="/tags/hexo/">
                         <span class="level-start">
-                            <span class="level-item">code</span>
+                            <span class="level-item">hexo</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -507,14 +598,14 @@
             
             <a href="/2018/12/31/test/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="test.md">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-31T15:48:22.000Z">2018-12-31</time></div>
-                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6">test.md</a>
+                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6"></a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -578,9 +669,9 @@
             <ul class="menu-list">
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/code/">
+                    <a class="level is-marginless" href="/tags/hexo/">
                         <span class="level-start">
-                            <span class="level-item">code</span>
+                            <span class="level-item">hexo</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -605,7 +696,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/网站logo.svg" alt="test.md" height="28">
+                    <img src="/images/网站logo.svg" alt="" height="28">
                 
                 </a>
                 <p class="is-size-7">
@@ -713,8 +804,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-    
-    
     
     
 
