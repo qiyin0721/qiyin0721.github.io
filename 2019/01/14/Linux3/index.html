@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Linux基础练习题 - 琪音的博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/profile.JPG">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131269046-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131269046-1');
+</script>
+
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/网站logo.svg" alt="Linux基础练习题" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/.">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/2018/封面4.jpg" alt="Linux基础练习题">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-14T03:32:14.000Z">2019-01-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    18 分钟 读完 (大约 2751 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Linux基础练习题
+            
+        </h1>
+        <div class="content">
+            <h2 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h2><ol>
+<li><p>使用<code>man</code>查看帮助文档时，使用哪个键可以退出文档？ （ <font size="4px" color="#BD1111">C</font> ）</p>
+<p>A. Z    B. TAB    C.q    D. Enter    E. 空格</p>
+</li>
+<li><p>以下哪一项是相对目录引用? （ <font size="4px" color="#BD1111">C</font> ）</p>
+<p>A. /home/student    B. /etc C. ..    D. ~</p>
+ <a id="more"></a>
+</li>
+<li><p>pwd可以显示如下的哪一项？( <font size="4px" color="#BD1111">AB</font>  )</p>
+<p>A. home/student    B. /etc    C. ..    D. ~</p>
+</li>
+<li><p>执行 cd ~ 命令后在执行pwd, 最可能的结果是什么？ ( <font size="4px" color="#BD1111">B</font>  )</p>
+<p>A. /home/student    B. /etc    C. ..    D. ~</p>
+<font size="2px" color="#BD1111">pwd显示的是绝对路径</font>
+</li>
+<li><p>文件names.conf是一个系统配置文件，根据Linux系统目录存放规则，它位于( <font size="4px" color="#BD1111">B</font> )</p>
+<p>A. /tmp    B. /etc    C. /bin    D. /sbin</p>
+</li>
+<li><p>/root目录很重要是因为 ( <font size="4px" color="#BD1111">A</font>  )</p>
+<p>A. 它是Linux文件系统的根目录 B. 它是超级用户的主目录 C. 它可被缩写成~ D. 任何用户都不能阅读它的内容</p>
+</li>
+<li><p>/bin和/usr/bin 含有相同的文件( <font size="4px" color="#BD1111">B</font>  )</p>
+<p>A. 是    B. 否</p>
+</li>
+<li><p>将文件file1.txt复制到file2.txt, 你可以使用( <font size="4px" color="#BD1111">B</font> )</p>
+<p>A. cp file1.txt &gt; file2.txt B. cp file1.txt file2.txt     C. dupe file1.txt file2.txt    D. mv file1.txt file2.txt</p>
+</li>
+<li><p>将file1 从当前目录中删除，可以使用( <font size="4px" color="#BD1111">A</font> )</p>
+<p>A. rm file1     B. erase file1    C. del file1    D. cut file1</p>
+</li>
+<li><p>如下哪个命令可以递归列出/usr 下的内容( <font size="4px" color="#BD1111">D</font> )</p>
+<p>A. lsdir /usr B. ls –recur /usr C. ls -r /usr D. ls -R /usr</p>
+</li>
+<li><p>以下哪个命令可以创建空文件夹( <font size="4px" color="#BD1111">C</font> )</p>
+<p>A. nd    B. nd     C. mkdir     D. newdir    E. touch -d</p>
+</li>
+<li><p>以下哪个命令可以复制目录ABC及除ABC/EFG/HIJ之外的子目录到archive( <font size="4px" color="#BD1111">E</font> )</p>
+<p>A. cp -x HIJ ABC archive</p>
+<p>B. cp -d 2 ABC archive</p>
+<p>C. cp -x HIJ ABC archive/ABC</p>
+<p>D. cp -d2 ABC archive/ABC</p>
+<p>E. 以上都错   <font size="2px" color="#BD1111">cp -r ABC/!(HIJ*)  archive/ABC</font></p>
+</li>
+<li><p>为什么有些人更偏爱使用rmdir命令，而不是rm -r（<font size="4px" color="#BD1111">A</font>）</p>
+<p>A. 保证目录中没被注意到的文件不会被无意中删除</p>
+<p>B. 因为rmdir命令不需要命令行选项就可以递归执行</p>
+<p>C. rmdir命令自动为它删除的文件备份</p>
+<p>D. A和B</p>
+</li>
+<li><p>ls /etc/*.??的输出文件可能包含以下哪个文件? (<font size="4px" color="#BD1111">BDE</font>)</p>
+<p> A. /ect/issue.net</p>
+<p> B. /etc/mail.rc</p>
+<p> C. /etc/php.ini</p>
+<p> D. /etc/huh.??</p>
+<p> E. /etc/xpdfrc.ja</p>
+<p> F. /ect/gss-1.0</p>
+ <font size="2px" color="#BD1111">* 将与零个或多个字符匹配  ？与任何单个字符匹配</font>
+</li>
+<li><p>下面哪个find命令的选项可以找出链接数大于2的普通文件? ( <font size="4px" color="#BD1111">A</font> )</p>
+<p>A. -type f -links +2</p>
+<p>B. -links +1</p>
+<p>C. -type o -links +1</p>
+<p>D. -type f -links +1</p>
+</li>
+<li><p>下面哪个或哪些命令能列出最近创建的文件，其文件名包含”coffee”字符串(<font size="4px" color="#BD1111">C</font>)</p>
+<p>A. slocate coffee</p>
+<p>B. find . -name coffee</p>
+<p>C. find . -name “*coffee*“</p>
+<p>D. ls -R *coffee*</p>
+</li>
+<li><p>gzip工具默认生成的压缩文件默认文件扩展名是? (<font size="4px" color="#BD1111">B</font>)</p>
+<p>A. .Z    B. .gz    C. .bz2    D. .tar</p>
+</li>
+<li><p>哪些命令可用于解压缩.gz文件(<font size="4px" color="#BD1111">BC</font>)</p>
+<p>A. uncompress    B. gunzip    C. gzip -d    D. bunzip2</p>
+</li>
+</ol>
+<h2 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h2><ol>
+<li><p>Windows如何登陆到远程服务器，有哪些可用工具？</p>
+ <font size="2px" color="#BD1111">答：Mac终端、Linux使用SSH命令。 Windows平台上一般用Xshell或Putty</font>
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>打开终端之后，如何查看自己当前所在路径，如何查看当前目录下的内容</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">pwd</span></span></span><br><span class="line">/Users/qiyin</span><br><span class="line"><span class="hljs-meta">n$</span><span class="hljs-bash"> ls</span></span><br><span class="line">AnacondaProjects	Desktop			Library			Pictures		R-Studio		anaconda3		playground</span><br><span class="line">Applications		Documents		Movies			Public</span><br><span class="line">Creative Cloud Files	Downloads		Music			PycharmProjects		Zotero			matplotlib</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Linux里的隐藏文件有什么特征，如何查看所有的隐藏文件？</p>
+</li>
+</ol>
+<font size="2px" color="#BD1111">      答：以“.”开头；输入“ls -a”命令可查看。</font>
+
+<ol start="4">
+<li>在Windows中，我们通过鼠标打开文件夹，切换目录，那在Linux如何切换目录？请尝试切换到<code>/usr/bin</code>目录下</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qiyindeMacBook-Pro-8:~ qiyin$ cd /usr/bin</span><br><span class="line">qiyindeMacBook-Pro-8:bin qiyin$</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>相对路径和绝对路径有何区别, 上一题的<code>/usr/bin</code>是相对路径还是绝对路径？<font size="2px" color="#BD1111">答：绝对路径是以根目录为标准，相对路径是以当前路径为标准。上一题是绝对路径。</font></li>
+<li>一般而言，Linux系统哪些文件夹里存放着可执行的命令？</li>
+</ol>
+<font size="2px" color="#BD1111">       答：“/usr/loca/bin”、“/usr/bin”目录下存放可执行文件。</font>
+
+<ol start="7">
+<li>Linux有五个文件和目录操作最常使用命令，cp, mv, mkdir, rm, ln，请问这个命令的作用分别是什么？</li>
+</ol>
+<font size="2px" color="#BD1111">        答：cp 复制文件和目录; mv 移动文件和目录；mkdir 新建文件和目录；rm 删除文件和目录；ln 添加链接(硬链接和软链接)。 </font>
+
+<ol start="8">
+<li>请用一行命令创建出如下的文件夹【参考资料：<a href="https://www.jianshu.com/p/8fba5ca0999a" target="_blank" rel="noopener">从PATH说起的shell命令行替换</a>】</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">test</span>/</span><br><span class="line">├── a</span><br><span class="line">│   ├── e</span><br><span class="line">│   │   └── f</span><br><span class="line">│   ├── g</span><br><span class="line">│   └── h</span><br><span class="line">├── b</span><br><span class="line">│   ├── e</span><br><span class="line">│   │   └── f</span><br><span class="line">│   ├── g</span><br><span class="line">│   └── h</span><br><span class="line">└── c</span><br><span class="line">    ├── e</span><br><span class="line">    │   └── f</span><br><span class="line">    ├── g</span><br><span class="line">    └── h</span><br></pre></td></tr></table></figure>
+<font size="2px" color="#BD1111">        答：mkdir&nbsp; -p &nbsp;test/{a,b,c}/{e,g,h}  &nbsp;&nbsp;test/{a,b,c}/e/f</font>
+
+<ol start="9">
+<li>为什么无法直接用<code>rmdir test</code>删除test文件夹，应该采取什么样的策略才能删除该文件夹？</li>
+</ol>
+<font size="2px" color="#BD1111">       答：显示“ Directory not empty”。我输入“rm &nbsp;-rf &nbsp;test”删除了该文件夹。死亡命令还是谨慎使用，尽量先删除里面的文件，再用rmdir。</font>
+
+<ol start="10">
+<li>为什么你无法在<code>/</code>下创建目录？</li>
+</ol>
+<font size="2px" color="#BD1111">      答：“/”代表根目录。（在linux的目录结构中）</font>
+
+<ol start="11">
+<li><code>ln</code>可以进行文件的链接，请问用它创建的软连接和硬链接有何区别,  这行命令能执行吗<code>ln /usr/bin ~/</code>， 如何不能执行，应该如何调整？</li>
+</ol>
+<font size="2px" color="#BD1111">       答：他们的文件权限不同，硬链接为“-rw-r–r–”,软链接为“lrwxr-xr-x”;软链接保存的是绝对路径。<br> “ln /usr/bin ~/“这个命令不能执行，硬链接不可以关联目录，只能是文件。“ln -s /usr/bin ~/”添加软链接。<br> </font>
+
+<ol start="12">
+<li>Linux中的命令有四种形式，而<code>type</code>可以用来判断命令的类型，请问<code>mv</code>,<code>cd</code>,<code>quote</code>,<code>ls</code>分别是什么类型的命令。</li>
+</ol>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">type</span> mv</span></span><br><span class="line">mv is /bin/mv  #可执行程序</span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">type</span> <span class="hljs-built_in">cd</span></span></span><br><span class="line">cd is a shell builtin  #shell内部命令</span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">type</span> quote</span></span><br><span class="line">-bash: type: quote: not found</span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">type</span> ls</span></span><br><span class="line">ls is hashed (/bin/ls)  #可执行程序</span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">type</span> quota</span></span><br><span class="line">quota is /usr/bin/quota  #可执行程序</span><br></pre></td></tr></table></figure>
+<ol start="13">
+<li>学习Linux命令行时其实就是不断学习、熟悉命令的过程。现在有一个命令为<code>fold</code>,请借助<code>man</code>和<code>whatis</code>的帮助学习这个命令的用法，并借助该命令将abc”拆分成一行一个字符。</li>
+</ol>
+<font size="2px" color="#BD1111">         答：建立一个内容为abc的文件为test.txt,输入“fold -w 1 test.txt”</font>
+
+<ol start="14">
+<li>如何查看当前的环境变量，PATH环境变量的用途是什么，如何查看PATH变量里包含的内容？</li>
+</ol>
+<font size="2px" color="#BD1111">        答：输入”printenv | less”，PATH环境变量存储目录列表，“echo $PATH”可以查看包含的内容。（冒号隔开）<a href="https://www.jianshu.com/p/acb1f062a925" target="_blank" rel="noopener">知识点</a></font>
+
+<ol start="15">
+<li>返回上一级目录<code>cd ..</code>或者上上一级<code>cd ../../</code>是比较常用的操作，请学习<code>alias</code>的这个命令，通过修改配置文件<code>~/.bashrc</code>，用<code>..</code>和<code>...</code>进行替代。（初学者用nano文本编辑器编辑文本，但是推荐去学习vim)</li>
+</ol>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">type</span> ..</span></span><br><span class="line">-bash: type: ..: not found</span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">alias</span> name=<span class="hljs-string">'..'</span><span class="hljs-comment">#创建命令</span></span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">alias</span> ..=<span class="hljs-string">'cd ..'</span><span class="hljs-comment">#命令内容</span></span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> ..</span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">type</span> ..</span></span><br><span class="line">.. is aliased to `cd ..'  #同理创建‘...’命令</span><br></pre></td></tr></table></figure>
+<ol start="16">
+<li>如何查找<code>/etc</code>下面的所有以<code>conf</code>结尾的文件</li>
+</ol>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> find <span class="hljs-string">"*.conf” /etc</span></span></span><br></pre></td></tr></table></figure>
+<ol start="17">
+<li>请将第8题的文件夹进行打包成一个”test.tar.gz”文件, 创建完成后删除test的所有内容</li>
+</ol>
+<font size="2px" color="#BD1111">       答：输入”tar -zcvf test</font>
+
+
+<h2 id="实战题"><a href="#实战题" class="headerlink" title="实战题"></a>实战题</h2><p>我们要开始一个新的RNA-seq数据分析项目，现在请在你的家目录下创建出如下的文件夹用于开展项目</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rna-seq-project/</span><br><span class="line">├── analysis</span><br><span class="line">│   └── data</span><br><span class="line">├── results</span><br><span class="line">└── scripts</span><br></pre></td></tr></table></figure>
+<p>由于后续会一直在这个文件夹操作，所以你想着要不创建一个环境变量，叫做WKDIR， 这样就可以用<code>cd $WKDIR</code>的方式快速跳转。</p>
+<p>每次都用<code>cd $WKDIR</code>其实也很恼人，你觉得有必要创建一个命令”gowork”来替代<code>cd $WKDIR</code>。</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">export</span></span></span><br><span class="line">WKDIR=/home/zlc/data/xu/project/RNA-seq</span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">echo</span> <span class="hljs-variable">$WKDIR</span></span></span><br><span class="line">/home/zlc/data/xu/project/RNA-seq</span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">cd</span> <span class="hljs-variable">$WKDIR</span></span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">alias</span> name=<span class="hljs-string">"gowork"</span></span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">alias</span> <span class="hljs-string">"gowork"</span>=<span class="hljs-string">"cd <span class="hljs-variable">$WKDIR</span>"</span></span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> gowork</span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> <span class="hljs-built_in">cd</span> ..</span></span><br><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> gowork</span></span><br></pre></td></tr></table></figure>
+<p>由于RNA-seq数据分析时需要安装一系列软件，为了便于管理，请在家目录下创建一个<code>src</code>文件夹用于存放下载的安装，新建<code>opt/biosoft</code>用于存放下载的生信软件。</p>
+<p>为了从NCBI上下载高通量测序数据，需要安装SRA Toolkit, 请在<a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software" target="_blank" rel="noopener">https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software</a>中根据所用系统，用<code>wget</code>下载安装包”sratoolkit.2.x.x-ubuntu64.tar.gz”，存放在<code>src</code>文件下（x.x.代表不同的版本号）</p>
+<p>不难发现”sratoolkit.2.x.x-ubuntu64.tar.gz”是一个压缩包，请将其解压缩并将其移动到<code>~/opt/biosoft</code>下。然后将其二进制文件所在路径添加到环境变量PATH中。</p>
+<h2 id="提高篇"><a href="#提高篇" class="headerlink" title="提高篇"></a>提高篇</h2><p>判断Linux的熟练度有一个不靠谱的标准：就是看他对一些快捷键的熟悉情况。当你记住一些快捷键之后，你使用终端的效率会大大提高。</p>
+<p>请先在终端上按照下图输入字符，后续的操作不能使用鼠标，并作答需要用到何种快捷键（允许查资料）</p>
+<p><img src="http://oex750gzt.bkt.clouddn.com/18-9-8/62670864.jpg" alt="光标移动"></p>
+<blockquote>
+<p>注意，xshell的”元键”不是ALT而是ESC, 所以你需要按下和释放ESC键才能获得ALT键一样的效果。</p>
+</blockquote>
+<ol>
+<li>请将光标移动上述字符串的最左边，然后再回到最右边</li>
+<li>请将光标向前移动一个单词到h上，并插入一个字符”y”, 使得结果变为”abc efge yhij”</li>
+<li>有些终端的”退格键”失灵了（自定百度退格键是哪个)，应该用哪个快捷键删除刚才的”y”</li>
+<li>当然即便”退格键”没有失灵，你想删除”hij”也需要敲三次退格键，使用哪个快捷键可以删除一整个单词</li>
+<li>用作练习的字符串并没有任何意义，所以请使用快捷键清空这一行</li>
+</ol>
+<blockquote>
+<p>上面这些快捷键一开始的时候你根本记不住，这没有关系，毕竟我们需要反复练习才能掌握足够多的知识。记忆这些命令在开始的时候会非常痛苦，但当你掌握之后你会得到飞一般的效率提高。在传统的程序员眼里，用鼠标的都是异类，用键盘才是王道。</p>
+</blockquote>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/收款码.jpg" alt="微信"></div>
+</a>
+
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/01/14/Linux4/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Linux 文本处理之awk</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/01/14/linux2/">
+                <span class="level-item">linux学习笔记（二）</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MTkyMy8xODQ2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div>
+
+    </div>
+</div>
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/profile.JPG" alt="琪音">
+                    
+                    <p class="is-size-4 is-block">
+                        琪音
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        生信小白
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Shanghai,China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        6
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="/images/二维码.jpg">
+                联系我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/qiyin0721">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#选择题">
+        <span class="has-mr-6">1</span>
+        <span>选择题</span>
+        </a></li><li>
+        <a class="is-flex" href="#简答题">
+        <span class="has-mr-6">2</span>
+        <span>简答题</span>
+        </a></li><li>
+        <a class="is-flex" href="#实战题">
+        <span class="has-mr-6">3</span>
+        <span>实战题</span>
+        </a></li><li>
+        <a class="is-flex" href="#提高篇">
+        <span class="has-mr-6">4</span>
+        <span>提高篇</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/yanglbme" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">yanglbme</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Blog/">
+            <span class="level-start">
+                <span class="level-item">Blog</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/生信/">
+            <span class="level-start">
+                <span class="level-item">生信</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux4/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面5.jpg" alt="Linux 文本处理之awk">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T04:26:16.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux4/" class="has-link-black-ter is-size-6">Linux 文本处理之awk</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面4.jpg" alt="Linux基础练习题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T03:32:14.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux3/" class="has-link-black-ter is-size-6">Linux基础练习题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面1.jpg" alt="linux学习笔记（二）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:52:08.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux2/" class="has-link-black-ter is-size-6">linux学习笔记（二）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面2.jpg" alt="linux学习笔记（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:40:18.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux/" class="has-link-black-ter is-size-6">linux学习笔记（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/31/test/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面31.jpg" alt="建立个人博客 (Mac OS)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-31T15:48:22.000Z">2018-12-31</time></div>
+                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6">建立个人博客 (Mac OS)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">4</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux4/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面5.jpg" alt="Linux 文本处理之awk">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T04:26:16.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux4/" class="has-link-black-ter is-size-6">Linux 文本处理之awk</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面4.jpg" alt="Linux基础练习题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T03:32:14.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux3/" class="has-link-black-ter is-size-6">Linux基础练习题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面1.jpg" alt="linux学习笔记（二）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:52:08.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux2/" class="has-link-black-ter is-size-6">linux学习笔记（二）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面2.jpg" alt="linux学习笔记（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:40:18.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux/" class="has-link-black-ter is-size-6">linux学习笔记（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/31/test/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面31.jpg" alt="建立个人博客 (Mac OS)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-31T15:48:22.000Z">2018-12-31</time></div>
+                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6">建立个人博客 (Mac OS)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">4</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/网站logo.svg" alt="Linux基础练习题" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 琪音&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+          <!--  <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>-->
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+
+    
+</body>
+</html>

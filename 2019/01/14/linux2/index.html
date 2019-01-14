@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>linux学习笔记（二） - 琪音的博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/profile.JPG">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131269046-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131269046-1');
+</script>
+
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/网站logo.svg" alt="linux学习笔记（二）" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/.">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/2018/封面1.jpg" alt="linux学习笔记（二）">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-14T01:52:08.000Z">2019-01-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 分钟 读完 (大约 1559 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                linux学习笔记（二）
+            
+        </h1>
+        <div class="content">
+            <p>本笔记的学习资源：<a href="http://billie66.github.io/TLCL/book/index.html" target="_blank" rel="noopener">The Linux Command Line</a></p>
+<h3 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h3><p>命令格式：命令 选项 参数<br>可执行程序的路径、修正命令的执行方式（短选项：-一个字符；长选项：–字母或单词）、命令的作用对象</p>
+<blockquote>
+<p>什么是命令？<br>1、命令是一个可执行程序。<br>2、命令是一个内建于shell自身的，bash支持若干命令，内部叫做shell内部命令（builttins）。例如，cd命令，就是一个shell内部命令。<br>3、命令是一个shell函数，就是一个小规模的shell脚本，它们混合到环境变量中。<br>4、是一个命令别名。</p>
+</blockquote>
+ <a id="more"></a>
+<h5 id="type-显示命令的类型"><a href="#type-显示命令的类型" class="headerlink" title="type - 显示命令的类型"></a>type - 显示命令的类型</h5><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">qiyindeMacBook-Pro:playground qiyin$ type type</span><br><span class="line">type is a shell builtin</span><br><span class="line">qiyindeMacBook-Pro:playground qiyin$ type command</span><br><span class="line">command is a shell builtin</span><br><span class="line">qiyindeMacBook-Pro:playground qiyin$ type ls</span><br><span class="line">ls is hashed (/bin/ls)</span><br></pre></td></tr></table></figure>
+<p>“type”、”command”、“ls”是要检测的命令名。</p>
+<h5 id="which-显示一个可执行程序的位置"><a href="#which-显示一个可执行程序的位置" class="headerlink" title="which - 显示一个可执行程序的位置"></a>which - 显示一个可执行程序的位置</h5><p>在大型服务器上，会出现不只安装了可执行程序的一个版本。为了确定所给定的执行程序的准确位置，使用“which”命令。不包括内建命令和命令别名。</p>
+<h5 id="help-得到shell内建命令的帮助文档"><a href="#help-得到shell内建命令的帮助文档" class="headerlink" title="help - 得到shell内建命令的帮助文档"></a>help - 得到shell内建命令的帮助文档</h5><p>输入“help cd”，出现在命令语法说明中的方括号，表示可选的项目。一个竖杠字符表示互斥选项。所以cd命令可能有一个“-L”选项或者“-P”选项。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">qiyindeMacBook-Pro:~ qiyin$ help cd</span><br><span class="line">cd: cd [-L|-P] [dir]</span><br><span class="line">    Change the current directory to DIR.  The variable $HOME is the</span><br><span class="line">    default DIR.  ...</span><br></pre></td></tr></table></figure>
+<ul>
+<li>–help - 显示用法消息，显示命令所支持的语法和选项说明。</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">qiyindeMacBook-Pro:~ qiyin$ mkdir --help</span><br><span class="line">mkdir: illegal option -- -</span><br><span class="line">usage: mkdir [-pv] [-m mode] directory ...</span><br></pre></td></tr></table></figure>
+<h5 id="man-显示程序手册页"><a href="#man-显示程序手册页" class="headerlink" title="man - 显示程序手册页"></a>man - 显示程序手册页</h5><p>man命令是Linux下的帮助指令，通过man指令可以查看Linux中的指令帮助、配置文件帮助和编程帮助等信息。</p>
+<h5 id="apropos-显示适当的命令"><a href="#apropos-显示适当的命令" class="headerlink" title="apropos - 显示适当的命令"></a>apropos - 显示适当的命令</h5><p>apropos命令在一些特定的包含系统命令的简短描述的数据库文件里查找关键字，然后把结果送到标准输出。</p>
+<blockquote>
+<p>如果你不知道完成某个特定任务所需要命令的名称，可以使用一个关键字通过Linux apropos实用程序来搜索它。该实用程序可以搜索关键字并且显示所有包含匹配项的man页面的简短描述。另外，使用man实用程序和-k（关键字）选项，可以得到和用Linux apropos实用程序相同的结果（实际上是相同的命令）</p>
+</blockquote>
+<h5 id="whatis-显示非常简洁的命令说明"><a href="#whatis-显示非常简洁的命令说明" class="headerlink" title="whatis - 显示非常简洁的命令说明"></a>whatis - 显示非常简洁的命令说明</h5><p>whatis命令是用于查询一个命令执行什么功能，并将查询结果打印到终端上。</p>
+<blockquote>
+<p>whatis命令等同于使用man -f命令。</p>
+</blockquote>
+<p>在Wikipedia上关于手册页的解释：</p>
+<p>A man page (short for manual page) is a form of software documentation usually found on a Unix or Unix-like operating system.</p>
+<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><p>计算机五大部件：CPU（运算器、控制器）、RAM(存储器)、输入设备/输出设备<br>程序：由指令和数据组成<br>I/O设备：硬盘、键盘…</p>
+<p>“I/O”代表 input/output<br>通过I/O重定向（I/O redirection）这个工具，你可以重定向命令的输入输出，命令的输入来自文件，而输出也存到文件，也可以把多个命令连接起来组成一个强大的命令管道。</p>
+<p>cat － 连接文件<br>sort － 排序文本行<br>uniq － 报道或省略重复行<br>grep － 打印匹配行<br>wc － 打印文件中换行符，字，和字节个数<br>head － 输出文件第一部分<br>tail － 输出文件最后一部分<br>tee － 从标准输入读取数据，并同时写到标准输出和文件</p>
+<h5 id="标准输入、输出和错误"><a href="#标准输入、输出和错误" class="headerlink" title="标准输入、输出和错误"></a>标准输入、输出和错误</h5><p>输出：<br>1、程序运行结果，程序要完成的而功能；<br>2、得到状态和错误信息，告诉程序进展。<br>标准输入（stdin)是指令数据的输入，默认是键盘；标准输出（stdout）是指令执行成功返回的结果，默认由屏幕显示；标准错误输出（stderr）是指令执行失败返回的错误信息，默认是屏幕。</p>
+<h5 id="重定向标准输出"><a href="#重定向标准输出" class="headerlink" title="重定向标准输出"></a>重定向标准输出</h5><blockquote>
+<p> 输出重定向到一个文件或设备，覆盖原来的文件</p>
+</blockquote>
+<p>这部分在实际数据中练习。</p>
+<h3 id="键盘快捷键操作"><a href="#键盘快捷键操作" class="headerlink" title="键盘快捷键操作"></a>键盘快捷键操作</h3><p>clear — 清空屏幕</p>
+<p>history — 显示历史列表内容</p>
+<h5 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h5><table>
+<thead>
+<tr>
+<th>按键</th>
+<th>行动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl-a</td>
+<td>移动光标到行首。</td>
+</tr>
+<tr>
+<td>Ctrl-e</td>
+<td>移动光标到行尾。</td>
+</tr>
+<tr>
+<td>Ctrl-f</td>
+<td>光标前移一个字符；和右箭头作用一样。</td>
+</tr>
+<tr>
+<td>Ctrl-b</td>
+<td>光标后移一个字符；和左箭头作用一样。</td>
+</tr>
+<tr>
+<td>Alt-f</td>
+<td>光标前移一个字。</td>
+</tr>
+<tr>
+<td>Alt-b</td>
+<td>光标后移一个字。</td>
+</tr>
+<tr>
+<td>Ctrl-l</td>
+<td>清空屏幕，移动光标到左上角。clear 命令完成同样的工作。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="修改文本"><a href="#修改文本" class="headerlink" title="修改文本"></a>修改文本</h5><table>
+<thead>
+<tr>
+<th>按键</th>
+<th>行动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl-d</td>
+<td>删除光标位置的字符。</td>
+</tr>
+<tr>
+<td>Ctrl-t</td>
+<td>光标位置的字符和光标前面的字符互换位置。</td>
+</tr>
+<tr>
+<td>Alt-t</td>
+<td>光标位置的字和其前面的字互换位置。</td>
+</tr>
+<tr>
+<td>Alt-l</td>
+<td>把从光标位置到字尾的字符转换成小写字母。</td>
+</tr>
+<tr>
+<td>Alt-u</td>
+<td>把从光标位置到字尾的字符转换成大写字母。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="剪切和粘贴文本"><a href="#剪切和粘贴文本" class="headerlink" title="剪切和粘贴文本"></a>剪切和粘贴文本</h5><table>
+<thead>
+<tr>
+<th>按键</th>
+<th>行动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl-k</td>
+<td>剪切从光标位置到行尾的文本。</td>
+</tr>
+<tr>
+<td>Ctrl-u</td>
+<td>剪切从光标位置到行首的文本。</td>
+</tr>
+<tr>
+<td>Alt-d</td>
+<td>剪切从光标位置到词尾的文本。</td>
+</tr>
+<tr>
+<td>Alt-Backspace</td>
+<td>剪切从光标位置到词头的文本。如果光标在一个单词的开头，剪切前一个单词。</td>
+</tr>
+<tr>
+<td>Ctrl-y</td>
+<td>把剪切环中的文本粘贴到光标位置。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="自动补全"><a href="#自动补全" class="headerlink" title="自动补全"></a>自动补全</h5><p><code>Tab</code> 补全信息</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/收款码.jpg" alt="微信"></div>
+</a>
+
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/01/14/Linux3/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Linux基础练习题</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/01/14/linux/">
+                <span class="level-item">linux学习笔记（一）</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MTkyMy8xODQ2OQ==">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div>
+
+    </div>
+</div>
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/profile.JPG" alt="琪音">
+                    
+                    <p class="is-size-4 is-block">
+                        琪音
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        生信小白
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Shanghai,China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        6
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="/images/二维码.jpg">
+                联系我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/qiyin0721">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#使用命令">
+        <span class="has-mr-6">1</span>
+        <span>使用命令</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#type-显示命令的类型">
+        <span class="has-mr-6">1.1</span>
+        <span>type - 显示命令的类型</span>
+        </a></li><li>
+        <a class="is-flex" href="#which-显示一个可执行程序的位置">
+        <span class="has-mr-6">1.2</span>
+        <span>which - 显示一个可执行程序的位置</span>
+        </a></li><li>
+        <a class="is-flex" href="#help-得到shell内建命令的帮助文档">
+        <span class="has-mr-6">1.3</span>
+        <span>help - 得到shell内建命令的帮助文档</span>
+        </a></li><li>
+        <a class="is-flex" href="#man-显示程序手册页">
+        <span class="has-mr-6">1.4</span>
+        <span>man - 显示程序手册页</span>
+        </a></li><li>
+        <a class="is-flex" href="#apropos-显示适当的命令">
+        <span class="has-mr-6">1.5</span>
+        <span>apropos - 显示适当的命令</span>
+        </a></li><li>
+        <a class="is-flex" href="#whatis-显示非常简洁的命令说明">
+        <span class="has-mr-6">1.6</span>
+        <span>whatis - 显示非常简洁的命令说明</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#重定向">
+        <span class="has-mr-6">2</span>
+        <span>重定向</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#标准输入、输出和错误">
+        <span class="has-mr-6">2.1</span>
+        <span>标准输入、输出和错误</span>
+        </a></li><li>
+        <a class="is-flex" href="#重定向标准输出">
+        <span class="has-mr-6">2.2</span>
+        <span>重定向标准输出</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#键盘快捷键操作">
+        <span class="has-mr-6">3</span>
+        <span>键盘快捷键操作</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#移动光标">
+        <span class="has-mr-6">3.1</span>
+        <span>移动光标</span>
+        </a></li><li>
+        <a class="is-flex" href="#修改文本">
+        <span class="has-mr-6">3.2</span>
+        <span>修改文本</span>
+        </a></li><li>
+        <a class="is-flex" href="#剪切和粘贴文本">
+        <span class="has-mr-6">3.3</span>
+        <span>剪切和粘贴文本</span>
+        </a></li><li>
+        <a class="is-flex" href="#自动补全">
+        <span class="has-mr-6">3.4</span>
+        <span>自动补全</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/yanglbme" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">yanglbme</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Blog/">
+            <span class="level-start">
+                <span class="level-item">Blog</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/生信/">
+            <span class="level-start">
+                <span class="level-item">生信</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux4/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面5.jpg" alt="Linux 文本处理之awk">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T04:26:16.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux4/" class="has-link-black-ter is-size-6">Linux 文本处理之awk</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面4.jpg" alt="Linux基础练习题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T03:32:14.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux3/" class="has-link-black-ter is-size-6">Linux基础练习题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面1.jpg" alt="linux学习笔记（二）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:52:08.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux2/" class="has-link-black-ter is-size-6">linux学习笔记（二）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面2.jpg" alt="linux学习笔记（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:40:18.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux/" class="has-link-black-ter is-size-6">linux学习笔记（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/31/test/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面31.jpg" alt="建立个人博客 (Mac OS)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-31T15:48:22.000Z">2018-12-31</time></div>
+                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6">建立个人博客 (Mac OS)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">4</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux4/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面5.jpg" alt="Linux 文本处理之awk">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T04:26:16.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux4/" class="has-link-black-ter is-size-6">Linux 文本处理之awk</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/Linux3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面4.jpg" alt="Linux基础练习题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T03:32:14.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/Linux3/" class="has-link-black-ter is-size-6">Linux基础练习题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面1.jpg" alt="linux学习笔记（二）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:52:08.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux2/" class="has-link-black-ter is-size-6">linux学习笔记（二）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/14/linux/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面2.jpg" alt="linux学习笔记（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-14T01:40:18.000Z">2019-01-14</time></div>
+                    <a href="/2019/01/14/linux/" class="has-link-black-ter is-size-6">linux学习笔记（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/生信/">生信</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/31/test/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/2018/封面31.jpg" alt="建立个人博客 (Mac OS)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-31T15:48:22.000Z">2018-12-31</time></div>
+                    <a href="/2018/12/31/test/" class="has-link-black-ter is-size-6">建立个人博客 (Mac OS)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">4</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/hexo/">
+                        <span class="level-start">
+                            <span class="level-item">hexo</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/网站logo.svg" alt="linux学习笔记（二）" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 琪音&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+          <!--  <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>-->
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+
+    
+</body>
+</html>
